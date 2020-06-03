@@ -36,7 +36,7 @@
 - [ ] Landing Page
 - [ ] Team Page
 
-- [ ] Web App (Try to use Flutter)
+# Web App (Try to use Flutter)
 
 Additional:
 
