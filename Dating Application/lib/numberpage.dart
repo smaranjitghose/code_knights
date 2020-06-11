@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'namepage.dart';
 //import 'package:international_phone_input/international_phone_input.dart';
 
 class numberInput extends StatefulWidget {
@@ -34,7 +35,7 @@ class _numberInputState extends State<numberInput> {
                   padding: const EdgeInsets.fromLTRB(15, 30, 0, 0),
                   child: IconButton(
                     icon: Icon(Icons.arrow_back_ios, color: Color(0xFFFE3C72), size: 35),
-//                onPressed: Navigator.pop(context),// to add routing later
+                    onPressed: () => Navigator.of(context).pop(true),// to add routing later
                   ),
                 )
               ],
@@ -83,6 +84,7 @@ class _numberInputState extends State<numberInput> {
                     ),
                     onTap: (){
                       //new page route
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => nameInput(),));
                     },
                   ),
                 ),

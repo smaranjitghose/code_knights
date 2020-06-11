@@ -22,7 +22,7 @@ class _genderInputState extends State<genderInput> {
                   padding: const EdgeInsets.fromLTRB(15, 30, 0, 0),
                   child: IconButton(
                     icon: Icon(Icons.arrow_back_ios, color: Color(0xFFFE3C72), size: 35),
-//                onPressed: Navigator.pop(context),// to add routing later
+                    onPressed: () => Navigator.of(context).pop(true),// to add routing later
                   ),
                 )
               ],

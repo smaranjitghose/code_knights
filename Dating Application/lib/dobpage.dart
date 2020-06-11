@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'genderpage.dart';
 
-class numberInput extends StatefulWidget {
+class dobInput extends StatefulWidget {
   @override
-  _numberInputState createState() => _numberInputState();
+  _dobInputState createState() => _dobInputState();
 }
 
-class _numberInputState extends State<numberInput> {
+class _dobInputState extends State<dobInput> {
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class _numberInputState extends State<numberInput> {
                   padding: const EdgeInsets.fromLTRB(15, 30, 0, 0),
                   child: IconButton(
                     icon: Icon(Icons.arrow_back_ios, color: Color(0xFFFE3C72), size: 35),
-//                onPressed: Navigator.pop(context),// to add routing later
+                    onPressed: () => Navigator.of(context).pop(true),// to add routing later
                   ),
                 )
               ],
@@ -36,7 +37,7 @@ class _numberInputState extends State<numberInput> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
-                      Text("My number is", style: TextStyle(fontWeight: FontWeight.w700, fontSize: 30, color: Colors.white), textAlign: TextAlign.left,),
+                      Text("Wish me on", style: TextStyle(fontWeight: FontWeight.w700, fontSize: 30, color: Colors.white), textAlign: TextAlign.left,),
                     ],
                   ),
                 ),
@@ -64,6 +65,7 @@ class _numberInputState extends State<numberInput> {
                     ),
                     onTap: (){
                       //new page route
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => genderInput(),));
                     },
                   ),
                 ),

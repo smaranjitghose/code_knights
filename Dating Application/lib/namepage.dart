@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'dobpage.dart';
+
 
 class nameInput extends StatefulWidget {
   @override
@@ -9,7 +11,7 @@ class nameInput extends StatefulWidget {
 class _nameInputState extends State<nameInput> {
   @override
   Widget build(BuildContext context) {
-    return return Scaffold(
+    return Scaffold(
       body: Container(
         color: Color(0xFF303030),
         child: Column(
@@ -22,7 +24,7 @@ class _nameInputState extends State<nameInput> {
                   padding: const EdgeInsets.fromLTRB(15, 30, 0, 0),
                   child: IconButton(
                     icon: Icon(Icons.arrow_back_ios, color: Color(0xFFFE3C72), size: 35),
-//                onPressed: Navigator.pop(context),// to add routing later
+                    onPressed: () => Navigator.of(context).pop(true),// to add routing later
                   ),
                 )
               ],
@@ -63,6 +65,7 @@ class _nameInputState extends State<nameInput> {
                     ),
                     onTap: (){
                       //new page route
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => dobInput(),));
                     },
                   ),
                 ),
