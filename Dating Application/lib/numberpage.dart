@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+//import 'package:international_phone_input/international_phone_input.dart';
 
 class numberInput extends StatefulWidget {
   @override
@@ -7,6 +8,16 @@ class numberInput extends StatefulWidget {
 }
 
 class _numberInputState extends State<numberInput> {
+  var phoneNumber;
+  var phoneIsoCode;
+
+
+  void onPhoneNumberChange(String number, String internationalizedPhoneNumber, String isoCode) {
+    setState(() {
+      phoneNumber = number;
+      phoneIsoCode = isoCode;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +30,12 @@ class _numberInputState extends State<numberInput> {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                IconButton(
-                  icon: Icon(Icons.arrow_back_ios),
-                  color: Color(0xFFFE3C72),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(15, 30, 0, 0),
+                  child: IconButton(
+                    icon: Icon(Icons.arrow_back_ios, color: Color(0xFFFE3C72), size: 35),
 //                onPressed: Navigator.pop(context),// to add routing later
+                  ),
                 )
               ],
             ),
@@ -40,8 +53,16 @@ class _numberInputState extends State<numberInput> {
                 ),
                 SizedBox(height: 20),
                 Container(
-                  child: Center()
-                ),
+                  child: Center(
+//                    child: InternationalPhoneInput(
+//                        decoration: InputDecoration.collapsed(hintText: '(416) 123-4567'),
+//                        onPhoneNumberChange: onPhoneNumberChange,
+//                        initialPhoneNumber: phoneNumber,
+//                        initialSelection: phoneIsoCode,
+//                        enabledCountries: ['+233', '+1'],
+//                        showCountryCodes: false
+                    ),
+                  ), // to put international number input
                 SizedBox(height: 20),
                 Material(
                   color: Colors.transparent,
@@ -68,9 +89,9 @@ class _numberInputState extends State<numberInput> {
                 SizedBox(height: 20,)
               ],
             )
-          ],
-        ),
-      ),
+          ]
+        )
+      )
     );
   }
 }
