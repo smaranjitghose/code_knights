@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'CustomClasses/user.dart';
 
 class homePage extends StatefulWidget {
   @override
@@ -7,6 +8,18 @@ class homePage extends StatefulWidget {
 }
 
 class _homePageState extends State<homePage> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    
+    print(currentUser.phoneNumber);
+    print(currentUser.name);
+    print(currentUser.dob);
+    print(currentUser.gender);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

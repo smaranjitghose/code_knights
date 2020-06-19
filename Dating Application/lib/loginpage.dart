@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'numberpage.dart';
+import 'signinpage.dart';
 
 class loginscreen extends StatefulWidget {
   @override
@@ -110,7 +112,7 @@ class _loginscreenState extends State<loginscreen> {
                             ),
                           ),
                           onTap: (){
-                            //new page route
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => SignIn(),));
                           },
                         ),
                       ),
