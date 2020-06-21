@@ -39,7 +39,6 @@ Thirdly, at times one might be matched with someone yet have stronger feelings t
  
  <p align="center"><img width=70% src="https://media.giphy.com/media/F95WSkkosQ9YQ/giphy.gif"></p>
  
-
  
  <h1 align= "center"><b> A Sneak Peak 🔬</b></h1>
 
@@ -57,8 +56,9 @@ Thirdly, at times one might be matched with someone yet have stronger feelings t
 <img width=20% src="https://avatars3.githubusercontent.com/u/42760850?v=4">
 </p>
 
+<h4 align="right>
 <a href="https://github.com/smaranjitghose">
-<h4 align="center"><b>Smaranjit Ghose</b></a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<b>Smaranjit Ghose</b></a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
 <a href="https://github.com/anushbhatia">
 <b>Anush Bhatia</b>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
 <a href="https://github.com/swat1998">
