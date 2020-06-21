@@ -41,22 +41,29 @@ Thirdly, at times one might be matched with someone yet have stronger feelings t
  
 
  
- <h1 align= "center"><b>Sneak Peak 🔬</b></h1>
+ <h1 align= "center"><b> A Sneak Peak 🔬</b></h1>
 
 ![](https://github.com/smaranjitghose/code_knights/blob/master/UI/Match%20%E2%80%93%201.png)
 
 [Source of above person's image](https://in.pinterest.com/pin/838232549374593756/?nic_v1=1atCMtorCqj8t2NUTSdK%2F1nRVWO3t2QHsE9OZHU9JW7Ix%2BJxrPrY%2FgxJfnOZbb3epm)
 
 
- <h1 align= "center"><b>Built for fun and no serious reason yet by </b></h1>
+ <h1 align= "center"><b>Built for fun 🤣 and no serious reason yet by:  </b></h1>
 
 <p align="center">
 <img width=20% src="https://avatars2.githubusercontent.com/u/46641503?v=4">&ensp;&ensp;&ensp;
-<img width=20% src="https://avatars2.githubusercontent.com/u/40017559?v=4">
+<img width=20% src="https://avatars2.githubusercontent.com/u/46641503?v=4"> &ensp;&ensp;&ensp;
+<img width=20% src="https://avatars3.githubusercontent.com/u/36136676?v=4">
 </p>
 
 <a href="https://github.com/smaranjitghose">
 <h4 align="center"><b>Smaranjit Ghose</b></a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-<a href="https://github.com/anushbhatia"><b>Anush Bhatia</b></h4></a>
+<a href="https://github.com/anushbhatia">
+<b>Anush Bhatia</b>ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<a href="https://github.com/swat1998">
+<b>Saswat Nayak</b></h4>
+</a>
+
+
 
 
