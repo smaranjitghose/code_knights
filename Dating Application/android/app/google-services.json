@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "846090033599",
+    "firebase_url": "https://code-knights-a5676.firebaseio.com",
+    "project_id": "code-knights-a5676",
+    "storage_bucket": "code-knights-a5676.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846090033599:android:020196a7d5ded1f883690a",
+        "android_client_info": {
+          "package_name": "com.example.date"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846090033599-g09truh2kp4p3943ac4bq7kpd97e2dat.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9bcHPcTK1aabMQKIy94XUBxvBOKr00Zo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846090033599-g09truh2kp4p3943ac4bq7kpd97e2dat.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
