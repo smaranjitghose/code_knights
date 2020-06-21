@@ -52,7 +52,7 @@ Thirdly, at times one might be matched with someone yet have stronger feelings t
 
 <p align="center">
 <img width=20% src="https://avatars2.githubusercontent.com/u/46641503?v=4">&ensp;&ensp;&ensp;
-<img width=20% src="https://avatars2.githubusercontent.com/u/46641503?v=4"> &ensp;&ensp;&ensp;
+<img width=20% src="https://avatars2.githubusercontent.com/u/40017559?v=4"> &ensp;&ensp;&ensp;
 <img width=20% src="https://avatars3.githubusercontent.com/u/36136676?v=4">
 </p>
 
