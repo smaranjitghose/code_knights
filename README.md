@@ -56,7 +56,7 @@ Thirdly, at times one might be matched with someone yet have stronger feelings t
 <img width=20% src="https://avatars3.githubusercontent.com/u/42760850?v=4">
 </p>
 
-<h4 align="centre">
+<h4 align="center">
 <a href="https://github.com/smaranjitghose">
 <b>Smaranjit Ghose</b></a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
 <a href="https://github.com/anushbhatia">
