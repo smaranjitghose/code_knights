@@ -1,3 +1,4 @@
+import 'package:date/CustomClasses/auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:international_phone_input/international_phone_input.dart';
@@ -14,6 +15,7 @@ class _numberInputState extends State<numberInput> {
 
   var phoneNumber;
   var phoneIsoCode;
+  String phone;
 
 
   void onPhoneNumberChange(String number, String internationalizedPhoneNumber, String isoCode) {
@@ -88,9 +90,14 @@ class _numberInputState extends State<numberInput> {
                       ),
                     ),
                     onTap: (){
+                      phone = phoneNumber.toString().trim();
+
+                      if(phone != null ){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => nameInput(),));
+                        AuthService().verifyPhone(phone);
+                      }
                       //new page route
-                      currentUser.phoneNumber=phoneNumber;
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => nameInput(),));
+//                      currentUser.phoneNumber=phoneNumber;
                     },
                   ),
                 ),

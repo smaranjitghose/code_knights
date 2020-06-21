@@ -14,10 +14,10 @@ class _homePageState extends State<homePage> {
     // TODO: implement initState
     super.initState();
     
-    print(currentUser.phoneNumber);
-    print(currentUser.name);
-    print(currentUser.dob);
-    print(currentUser.gender);
+//    print(currentUser.phoneNumber);
+//    print(currentUser.name);
+//    print(currentUser.dob);
+//    print(currentUser.gender);
   }
 
   @override

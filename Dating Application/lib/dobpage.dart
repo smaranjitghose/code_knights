@@ -131,7 +131,7 @@ class _dobInputState extends State<dobInput> {
                     ),
                     onTap: () {
                       //new page route
-                      currentUser.dob=_dateTime;
+//                      currentUser.dob=_dateTime;
                       Navigator.push(
                           context,
                           MaterialPageRoute(
