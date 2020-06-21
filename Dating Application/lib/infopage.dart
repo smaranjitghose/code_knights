@@ -11,8 +11,6 @@ class _infoPageState extends State<infoPage> {
   @override
   Widget build(BuildContext context) {
 
-    var fit_height = MediaQuery.of(context).size.height * .80;
-
     return Scaffold(
       body: Stack(
         children: <Widget>[
@@ -20,7 +18,7 @@ class _infoPageState extends State<infoPage> {
             children: <Widget>[
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: fit_height,
+                height: MediaQuery.of(context).size.height * .90,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage("assets/images/Rectangle 4.png"),
@@ -38,8 +36,9 @@ class _infoPageState extends State<infoPage> {
             children: <Widget>[
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: fit_height,
+                height: MediaQuery.of(context).size.height * .80,
                 color: Colors.transparent,
+                child: IconButton(icon: Icon(Icons.arrow_back_ios, color: Color(0xFFFE3C72), size: 40), alignment: Alignment.topLeft,),
               ),
               Container(
                 width: MediaQuery.of(context).size.width,

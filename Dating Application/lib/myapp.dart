@@ -1,13 +1,20 @@
+import 'package:date/chatpage.dart';
 import 'package:date/genderpage.dart';
 import 'package:date/homepage.dart';
 import 'package:date/numberpage.dart';
+import 'package:date/profilePage.dart';
+import 'package:date/settingsPage.dart';
 import 'package:flutter/material.dart';
 import 'loginpage.dart';
+import 'namepage.dart';
+import 'dobpage.dart';
+import 'infopage.dart';
+import 'messagingpage.dart';
 import 'signinpage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 Future getCurrentUser() async {
-FirebaseUser _user = await FirebaseAuth.instance.currentUser();
+  FirebaseUser _user = await FirebaseAuth.instance.currentUser();
 // print("User: ${_user.displayName ?? "None"}");
 return _user;}
 

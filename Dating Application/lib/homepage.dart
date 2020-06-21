@@ -8,17 +8,20 @@ class homePage extends StatefulWidget {
 }
 
 class _homePageState extends State<homePage> {
-
+  
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    
     print(currentUser.phoneNumber);
     print(currentUser.name);
     print(currentUser.dob);
     print(currentUser.gender);
   }
+  
+  double rating;
+  double _value = 5; // just to set a default value
+
 
   @override
   Widget build(BuildContext context) {
@@ -68,8 +71,8 @@ class _homePageState extends State<homePage> {
                                 child: IconButton(icon: Icon(Icons.person, color: Colors.white), onPressed: null, ),//page route yet to be given
                               ),
                               Container(
-                                width: 40,
-                                height: 40,
+                                width: 50,
+                                height: 50,
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                   boxShadow: [
@@ -118,20 +121,49 @@ class _homePageState extends State<homePage> {
                             ),
                             child: Column(
                               children: <Widget>[
-                                Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Icon(Icons.location_on, color: Colors.white.withOpacity(0.4),),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: SliderTheme(
+                                    data: SliderTheme.of(context).copyWith(
+                                      activeTrackColor: Colors.red[700],
+                                      inactiveTrackColor: Colors.red[100],
+                                      trackShape: RoundedRectSliderTrackShape(),
+                                      trackHeight: 4.0,
+                                      thumbShape: RoundSliderThumbShape(enabledThumbRadius: 12.0),
+                                      thumbColor: Colors.redAccent,
+                                      overlayColor: Colors.red.withAlpha(32),
+                                      overlayShape: RoundSliderOverlayShape(overlayRadius: 28.0),
+                                      tickMarkShape: RoundSliderTickMarkShape(),
+                                      activeTickMarkColor: Colors.red[700],
+                                      inactiveTickMarkColor: Colors.red[100],
+                                      valueIndicatorShape: PaddleSliderValueIndicatorShape(),
+                                      valueIndicatorColor: Colors.redAccent,
+                                      valueIndicatorTextStyle: TextStyle(
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    child: Slider(
+                                      value: _value,
+                                      min: 0,
+                                      max: 10,
+                                      divisions: 10,
+                                      label: '$_value',
+                                      onChanged: (rating) {
+                                        setState(
+                                              () {
+                                            _value = rating;
+                                          },
+                                        );
+                                      },
+                                    ),
                                   ),
                                 ),
-//                                Slider()
                               ],
                             ),
                           )
                         ],
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
