@@ -13,6 +13,7 @@ class _homePageState extends State<homePage> {
   void initState() {
     // TODO: implement initState
     super.initState();
+
     print(currentUser.phoneNumber);
     print(currentUser.name);
     print(currentUser.dob);

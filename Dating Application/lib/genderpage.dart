@@ -185,7 +185,7 @@ class _genderInputState extends State<genderInput> {
                       ),
                     ),
                     onTap: () {
-                      currentUser.gender=gender;
+//                      currentUser.gender=gender;
                       Navigator.of(context).pushAndRemoveUntil(
                           MaterialPageRoute(builder: (context) => homePage()),
                           (Route<dynamic> route) => false);

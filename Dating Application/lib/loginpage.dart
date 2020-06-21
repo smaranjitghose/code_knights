@@ -1,9 +1,10 @@
+import 'package:date/CustomClasses/auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'numberpage.dart';
-import 'signinpage.dart';
+
 
 class loginscreen extends StatefulWidget {
   @override
@@ -11,6 +12,9 @@ class loginscreen extends StatefulWidget {
 }
 
 class _loginscreenState extends State<loginscreen> {
+
+  final AuthService _auth = AuthService();
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -88,7 +92,14 @@ class _loginscreenState extends State<loginscreen> {
                               ],
                             ),
                           ),
-                          onTap: (){
+                          onTap: () async {
+                            dynamic result = await _auth.signInAnon();
+                            if (result == null){
+                              print('error');
+                            }else{
+                              print("signed in");
+                              print(result.uid);
+                            }
                             //link to the facebook API
                           },
                         ),
@@ -112,7 +123,7 @@ class _loginscreenState extends State<loginscreen> {
                             ),
                           ),
                           onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => SignIn(),));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => numberInput(),));
                           },
                         ),
                       ),
