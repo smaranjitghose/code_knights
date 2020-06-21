@@ -52,16 +52,22 @@ Thirdly, at times one might be matched with someone yet have stronger feelings t
 
 <p align="center">
 <img width=20% src="https://avatars2.githubusercontent.com/u/46641503?v=4">&ensp;&ensp;&ensp;
-<img width=20% src="https://avatars2.githubusercontent.com/u/40017559?v=4"> &ensp;&ensp;&ensp;
-<img width=20% src="https://avatars3.githubusercontent.com/u/36136676?v=4">
+<img width=20% src="https://avatars2.githubusercontent.com/u/40017559?v=4">&ensp;&ensp;&ensp;
+<img width=20% src="https://avatars3.githubusercontent.com/u/36136676?v=4">&ensp;&ensp;&ensp;
+<img width=20% src="https://avatars3.githubusercontent.com/u/ 42760850?v=4">
 </p>
 
 <a href="https://github.com/smaranjitghose">
 <h4 align="center"><b>Smaranjit Ghose</b></a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
 <a href="https://github.com/anushbhatia">
-<b>Anush Bhatia</b>ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<b>Anush Bhatia</b>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
 <a href="https://github.com/swat1998">
-<b>Saswat Nayak</b></h4>
+<b>Saswat Nayak</b>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<a href="https://github.com/ousnik">
+<b>Ousnik Polley</b></h4>
+ 
+ 
+ 
 </a>
 
 
