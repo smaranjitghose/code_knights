@@ -1,7 +1,10 @@
+import 'package:date/CustomClasses/auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:international_phone_input/international_phone_input.dart';
 import 'namepage.dart';
-//import 'package:international_phone_input/international_phone_input.dart';
+import 'CustomClasses/user.dart';
+
 
 class numberInput extends StatefulWidget {
   @override
@@ -9,8 +12,10 @@ class numberInput extends StatefulWidget {
 }
 
 class _numberInputState extends State<numberInput> {
+
   var phoneNumber;
   var phoneIsoCode;
+  String phone;
 
 
   void onPhoneNumberChange(String number, String internationalizedPhoneNumber, String isoCode) {
@@ -35,7 +40,7 @@ class _numberInputState extends State<numberInput> {
                   padding: const EdgeInsets.fromLTRB(15, 30, 0, 0),
                   child: IconButton(
                     icon: Icon(Icons.arrow_back_ios, color: Color(0xFFFE3C72), size: 35),
-                    onPressed: () => Navigator.of(context).pop(true),// to add routing later
+                    onPressed: () => Navigator.of(context).pop(true),
                   ),
                 )
               ],
@@ -54,16 +59,18 @@ class _numberInputState extends State<numberInput> {
                 ),
                 SizedBox(height: 20),
                 Container(
-                  child: Center(
-//                    child: InternationalPhoneInput(
-//                        decoration: InputDecoration.collapsed(hintText: '(416) 123-4567'),
-//                        onPhoneNumberChange: onPhoneNumberChange,
-//                        initialPhoneNumber: phoneNumber,
-//                        initialSelection: phoneIsoCode,
-//                        enabledCountries: ['+233', '+1'],
-//                        showCountryCodes: false
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 30, right: 30),
+                    child: InternationalPhoneInput(
+                        decoration: InputDecoration(border:UnderlineInputBorder()),
+                        onPhoneNumberChange: onPhoneNumberChange,
+                        initialPhoneNumber: phoneNumber,
+                        initialSelection: phoneIsoCode,
+                        enabledCountries: ['+1', '+91'],
+                        showCountryCodes: true
                     ),
-                  ), // to put international number input
+                  )
+                ), // to put international number input
                 SizedBox(height: 20),
                 Material(
                   color: Colors.transparent,
@@ -83,8 +90,14 @@ class _numberInputState extends State<numberInput> {
                       ),
                     ),
                     onTap: (){
+                      phone = phoneNumber.toString().trim();
+
+                      if(phone != null ){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => nameInput(),));
+                        AuthService().verifyPhone(phone);
+                      }
                       //new page route
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => nameInput(),));
+//                      currentUser.phoneNumber=phoneNumber;
                     },
                   ),
                 ),

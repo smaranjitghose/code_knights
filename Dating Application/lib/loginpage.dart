@@ -1,8 +1,10 @@
+import 'package:date/CustomClasses/auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:date/numberpage.dart';
+import 'numberpage.dart';
+
 
 class loginscreen extends StatefulWidget {
   @override
@@ -10,6 +12,9 @@ class loginscreen extends StatefulWidget {
 }
 
 class _loginscreenState extends State<loginscreen> {
+
+  final AuthService _auth = AuthService();
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -32,48 +37,43 @@ class _loginscreenState extends State<loginscreen> {
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(
-                    children: <Widget>[ 
-                      Padding(
-                        padding: const EdgeInsets.only(bottom:12.0),
-                        child: RichText(
-                          textAlign: TextAlign.center,
-                          text: TextSpan(
-                            children: <TextSpan>[
-                           TextSpan(text: "By tapping Log In, you agree with our ", style: TextStyle(fontSize: 13)),
-                           TextSpan(
-                               text: "Terms of Service",
-                               style: TextStyle(
-                                   fontSize: 13,
-                                   decoration: TextDecoration.underline
-                               ),
-                               recognizer: TapGestureRecognizer()..onTap = () async {
-                                 const url = "https://www.google.com"; // to th given location
-                                   if (await canLaunch(url)){
-                                     await launch(url);}
-                                   else {
-                                     throw "Could not reach the page";
-                                   }
-                               }
-                           ),
-                           TextSpan(text: " and ", style: TextStyle(fontSize: 13)),
-                           TextSpan(
-                               text: "Privacy Policy",
-                               style: TextStyle(
-                                   fontSize: 13,
-                                   decoration: TextDecoration.underline
-                               ),
-                               recognizer: TapGestureRecognizer()..onTap = () async {
-                                 const url = "https://www.google.com"; // to th given location
+                    children: <Widget>[
+                      RichText(text: TextSpan(
+                       children: <TextSpan>[
+                         TextSpan(text: "By tapping Log In, you agree with our ", style: TextStyle(fontSize: 13)),
+                         TextSpan(
+                             text: "Terms of Service",
+                             style: TextStyle(
+                                 fontSize: 13,
+                                 decoration: TextDecoration.underline
+                             ),
+                             recognizer: TapGestureRecognizer()..onTap = () async {
+                               const url = "https://www.google.com"; // to th given location
                                  if (await canLaunch(url)){
-                                   await launch(url);
-                                 }else {
+                                   await launch(url);}
+                                 else {
                                    throw "Could not reach the page";
                                  }
+                             }
+                         ),
+                         TextSpan(text: " and ", style: TextStyle(fontSize: 13)),
+                         TextSpan(
+                             text: "Privacy Policy",
+                             style: TextStyle(
+                                 fontSize: 13,
+                                 decoration: TextDecoration.underline
+                             ),
+                             recognizer: TapGestureRecognizer()..onTap = () async {
+                               const url = "https://www.google.com"; // to th given location
+                               if (await canLaunch(url)){
+                                 await launch(url);
+                               }else {
+                                 throw "Could not reach the page";
                                }
-                            ),
-                         ]
-                        )),
-                      ),
+                             }
+                          ),
+                       ]
+                      )),
                       SizedBox(height: 20),
                       Material(
                         color: Colors.transparent,
@@ -92,7 +92,14 @@ class _loginscreenState extends State<loginscreen> {
                               ],
                             ),
                           ),
-                          onTap: (){
+                          onTap: () async {
+                            dynamic result = await _auth.signInAnon();
+                            if (result == null){
+                              print('error');
+                            }else{
+                              print("signed in");
+                              print(result.uid);
+                            }
                             //link to the facebook API
                           },
                         ),
@@ -117,7 +124,6 @@ class _loginscreenState extends State<loginscreen> {
                           ),
                           onTap: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context) => numberInput(),));
-                            //new page route
                           },
                         ),
                       ),

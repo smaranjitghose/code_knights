@@ -1,14 +1,26 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dobpage.dart';
-
+import 'CustomClasses/user.dart';
 
 class nameInput extends StatefulWidget {
+
   @override
   _nameInputState createState() => _nameInputState();
 }
 
 class _nameInputState extends State<nameInput> {
+
+  String name = '';
+
+  final nameController = TextEditingController();
+
+  @override
+  void dispose() {
+    nameController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +36,7 @@ class _nameInputState extends State<nameInput> {
                   padding: const EdgeInsets.fromLTRB(15, 30, 0, 0),
                   child: IconButton(
                     icon: Icon(Icons.arrow_back_ios, color: Color(0xFFFE3C72), size: 35),
-                    onPressed: () => Navigator.of(context).pop(true),// to add routing later
+                    onPressed: () => Navigator.of(context).pop(true),
                   ),
                 )
               ],
@@ -43,7 +55,22 @@ class _nameInputState extends State<nameInput> {
                 ),
                 SizedBox(height: 20),
                 Container(
-                    child: Center()
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 30, right: 30),
+                      child: TextField(
+                        controller: nameController,
+                        textCapitalization: TextCapitalization.words,
+                        cursorColor: Color(0xFFFE3C72),
+                        autocorrect: false,
+                        decoration: InputDecoration(
+                          border: UnderlineInputBorder(),
+                        ),
+                        style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w300),
+                        onChanged: (val){
+                          setState(() => name = val);
+                        },
+                      )
+                    ),
                 ),
                 SizedBox(height: 20),
                 Material(
@@ -65,6 +92,7 @@ class _nameInputState extends State<nameInput> {
                     ),
                     onTap: (){
                       //new page route
+//                      currentUser.name=nameController.text;
                       Navigator.push(context, MaterialPageRoute(builder: (context) => dobInput(),));
                     },
                   ),
